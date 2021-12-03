@@ -1,8 +1,16 @@
 name: twrp-build
 
 on:
-  push:
-    branches: [ twrp-11 ]
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  workflow_dispatch:
 
 jobs:
   build:
