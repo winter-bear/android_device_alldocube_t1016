@@ -65,7 +65,7 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
         lunch twrp_t1016-eng 
-        mka bootimage -j2
+        mka bootimage
          cp  out/target/product/t1016/boot.img    out/target/product/x695c/boot-t1016-main-$(date +"%Y%m%d-%H%M").img 
     
     - uses: actions/upload-artifact@v2
