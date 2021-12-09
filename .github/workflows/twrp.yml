@@ -51,6 +51,7 @@ jobs:
         repo sync -j16
         cp -f vendor/twrp/dummy/Android.mk frameworks/base/core/xsd/vts/Android.mk
         cp -f vendor/twrp/dummy/Android.mk frameworks/base/services/core/xsd/vts/Android.mk
+        rm -rf .repo
 
     - name: Checkout device tree
       uses: actions/checkout@v2
@@ -65,8 +66,9 @@ jobs:
         source build/envsetup.sh
         lunch twrp_t1016-eng 
         mka bootimage -j4
+         cp  out/target/product/t1016/boot.img    out/target/product/x695c/boot-t1016-main-$(date +"%Y%m%d-%H%M").img 
     
     - uses: actions/upload-artifact@v2
       with:
         name: twrp.img
-        path: twrp/out/target/product/t1016/boot.img
+        path: twrp/out/target/product/t1016/boot*.img
