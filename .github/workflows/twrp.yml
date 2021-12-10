@@ -61,7 +61,7 @@ jobs:
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_x695c-eng && mka $TARGET -j2
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_t1016-eng && mka $TARGET -j2
               cp  out/target/product/t1016/boot.img    out/target/product/x695c/boot-t1016-main-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
