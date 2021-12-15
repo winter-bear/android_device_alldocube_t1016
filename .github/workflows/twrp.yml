@@ -72,4 +72,4 @@ jobs:
           tag_name: TWRP_11-main
           name: main
           files: | 
-            twrp/out/target/product/$DEVICE/boot*.img
+            twrp/out/target/product/t1016/boot*.img
